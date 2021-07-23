@@ -64,7 +64,7 @@
             android:src="@drawable/login_divider" />
 
         <TextView
-            android:id="@+id/email_wrong_format_alert"
+            android:id="@+id/register_email_alert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
@@ -155,6 +155,17 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/register_name_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:text="이름은 한글 또는 영어로 입력해주십시오."
+            android:textSize="10sp"
+            android:textColor="@color/red"
+            android:visibility="invisible"/>
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -188,7 +199,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:src="@drawable/error_icon"
-                android:visibility="visible"/>
+                android:visibility="invisible"/>
         </FrameLayout>
 
         <ImageView
@@ -243,7 +254,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:src="@drawable/error_icon"
-                android:visibility="visible"/>
+                android:visibility="invisible"/>
         </FrameLayout>
 
         <TextView
@@ -263,7 +274,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
-            android:text="Develop Option"
+            android:text="Develop Category"
             android:textSize="15sp"
             android:textColor="@color/info_light_blue" />
 
@@ -272,19 +283,20 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
 
-            <EditText
-                android:id="@+id/register_develop_option"
+            <TextView
+                android:id="@+id/register_develop_category"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="10dp"
-                android:hint="개발 직급을 선택하세요.                   "
+                android:hint="개발 분야를 선택하세요.                   "
+                android:gravity="center_vertical"
                 android:textSize="12sp"
-                android:inputType="text"
+                android:inputType="none"
                 android:background="@null" />
 
             <Spinner
-                android:id="@+id/developer_option"
+                android:id="@+id/register_develop_category_spinner"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_marginEnd="25dp"
