@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="developer_option">
+        <item >Web Front-End</item>
+        <item >Web Back-End</item>
+        <item >Web Design</item>
+        <item >Android Client</item>
+        <item >Android Design</item>
+        <item >iOS Client</item>
+        <item >iOS Design</item>
+        <item >AI</item>
+        <item >CG</item>
+        <item >BlockChain</item>
+        <item >Networking</item>
+        <item >Embedded Software</item>
+        <item >Project Management</item>
+        <item >Product Management</item>
+
+    </string-array>
+    
+    
+</resources>
