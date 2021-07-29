@@ -15,10 +15,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class FragmentMyProject extends Fragment {
-    private ImageView recentProjectImage, project1Image, project2Image;
-    private TextView recentProjectName, recentProjectDescription, project1Name, project1Category,
-            project2Name, project2Category, project3Name, project3Category;
+    private ImageView recentProjectImage;
+    private TextView recentProjectName, recentProjectDescription;
     private Button moreButton;
+
+    public ImageView project1Image, project2Image;
+    public TextView project1Name, project1Category, project2Name, project2Category, project3Name, project3Category;
 
     public static FragmentMyProject newInstance() {
         return new FragmentMyProject();
@@ -48,6 +50,9 @@ public class FragmentMyProject extends Fragment {
                 ((HomeActivity) getActivity()).replaceFragment(FragmentProjectList.newInstance());
             }
         });
+
+        /* 서버나 로컬에서 프로젝트를 생성하면 그 정보를 받아오는 부분 */
+
         return view;
     }
 }
