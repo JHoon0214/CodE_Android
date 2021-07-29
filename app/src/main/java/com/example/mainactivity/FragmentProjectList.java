@@ -12,6 +12,10 @@ import android.view.View;
 
 public class FragmentProjectList extends Fragment {
 
+    public static FragmentProjectList newInstance() {
+        return new FragmentProjectList();
+    }
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
