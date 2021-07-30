@@ -45,10 +45,10 @@ public class FragmentProjectList extends Fragment {
     private void getData() {
         // 임의의 데이터입니다.
         List<Data> listTitle = Arrays.asList(
-                new Data("one", "1"), 
-                new Data("two", "2"), 
-                new Data("three", "3"),
-                new Data("four", "4"));
+                new Data("one", "첫번째 프로젝트에 대한 설명"),
+                new Data("two", "두번째 프로젝트에 대한 설명"),
+                new Data("three", "세번째 프로젝트에 대한 설명"),
+                new Data("four", "네번째 프로젝트에 대한 설명"));
 
         for (int i = 0; i < listTitle.size(); i++) {
             // 각 값이 들어간 data를 adapter에 추가합니다.
