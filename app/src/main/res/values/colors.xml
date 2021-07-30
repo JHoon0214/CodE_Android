@@ -11,4 +11,6 @@
     <color name="light_grey">#DDDDDD</color>
     <color name="info_light_blue">#297FCA</color>
     <color name="red">#FF0000</color>
+    <color name="tab_grey_blue">#E4F1FD</color>
+    <color name="tab_light_grey_blue">#2F7DC0</color>
 </resources>

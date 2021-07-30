@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@color/info_light_blue"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/home_drawer"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:minHeight="?actionBarSize"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:gravity="center"
+                    android:background="@drawable/drawer_icon" />
+
+                <ImageView
+                    android:id="@+id/logo_inapp"
+                    android:src="@drawable/logo_inapp"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:gravity="center_horizontal"
+                    android:text="@string/app_name"
+                    android:textAppearance="@style/TextAppearance.Widget.AppCompat.Toolbar.Title" />
+
+                <ImageView
+                    android:id="@+id/home_filter"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:minHeight="?actionBarSize"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@drawable/filter_icon" />
+
+                <ImageView
+                    android:id="@+id/home_search"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:minHeight="?actionBarSize"
+                    android:layout_marginEnd="60dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:background="@drawable/search_icon" />
+
+            </FrameLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/info_light_blue"
+                app:tabTextColor="@color/white"
+                app:tabIndicatorColor="@color/white"
+                app:tabIndicatorHeight="4.5dp">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="My Project" />
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Project List"/>
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Project"/>
+
+            </com.google.android.material.tabs.TabLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tabs" >
+        </FrameLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

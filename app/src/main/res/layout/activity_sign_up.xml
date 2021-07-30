@@ -316,6 +316,8 @@
             android:layout_height="50dp"
             android:layout_marginTop="40dp"
             android:layout_gravity="center"
-            android:background="@drawable/confirm_button"/>
+            android:background="@drawable/confirm_button"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:translationZ="7dp"/>
     </LinearLayout>
 </LinearLayout>
