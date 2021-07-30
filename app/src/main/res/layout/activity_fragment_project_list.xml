@@ -4,11 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <TextView
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="20sp"
-        android:text="Fragment: Project List"/>
-
+        android:background="#E4F1FD"/>
 </LinearLayout>
