@@ -236,7 +236,7 @@ public class SignUpActivity extends AppCompatActivity {
                     exception.printStackTrace();
                 }
 
-                String url = getString(R.string.url) + "/user/signUp";
+                String url = getString(R.string.url) + "/signUp";
                 RequestQueue queue = Volley.newRequestQueue(SignUpActivity.this);
                 final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, infoForLogin,
                         new Response.Listener<JSONObject>() {
