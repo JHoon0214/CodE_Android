@@ -85,7 +85,7 @@ public class FragmentProgress extends Fragment {
 
         /* 완료한 서브프로젝트 개수에 따라 진척도 출력 */
         subProject1.completed = true;
-        subProject2.completed = false;
+        subProject2.completed = true;
         subProject3.completed = true;
         setProgressPercentage();
 
@@ -105,13 +105,11 @@ public class FragmentProgress extends Fragment {
                 String projectName = subProject1.name;
                 String projectPeriod = subProject1.period;
                 String projectDescription = subProject1.description;
-            //    String projectImageName = projectName + "_image";
 
-                Intent project1Intent = new Intent(getActivity(), ProjectDetailActivity.class);
+                Intent project1Intent = new Intent(getActivity(), SubprojectDetailActivity.class);
                 project1Intent.putExtra("projectName", projectName);
                 project1Intent.putExtra("projectPeriod", projectPeriod);
                 project1Intent.putExtra("projectDescription", projectDescription);
-            //    project1Intent.putExtra("projectImageName", projectImageName);
                 startActivity(project1Intent);
             }
         });
@@ -122,13 +120,11 @@ public class FragmentProgress extends Fragment {
                 String projectName = subProject2.name;
                 String projectPeriod = subProject2.period;
                 String projectDescription = subProject2.description;
-                //    String projectImageName = projectName + "_image";
 
-                Intent project2Intent = new Intent(getActivity(), ProjectDetailActivity.class);
+                Intent project2Intent = new Intent(getActivity(), SubprojectDetailActivity.class);
                 project2Intent.putExtra("projectName", projectName);
                 project2Intent.putExtra("projectPeriod", projectPeriod);
                 project2Intent.putExtra("projectDescription", projectDescription);
-                //    project1Intent.putExtra("projectImageName", projectImageName);
                 startActivity(project2Intent);
             }
         });
@@ -139,13 +135,11 @@ public class FragmentProgress extends Fragment {
                 String projectName = subProject3.name;
                 String projectPeriod = subProject3.period;
                 String projectDescription = subProject3.description;
-                //    String projectImageName = projectName + "_image";
 
-                Intent project3Intent = new Intent(getActivity(), ProjectDetailActivity.class);
+                Intent project3Intent = new Intent(getActivity(), SubprojectDetailActivity.class);
                 project3Intent.putExtra("projectName", projectName);
                 project3Intent.putExtra("projectPeriod", projectPeriod);
                 project3Intent.putExtra("projectDescription", projectDescription);
-                //    project1Intent.putExtra("projectImageName", projectImageName);
                 startActivity(project3Intent);
             }
         });
