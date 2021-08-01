@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/tab_grey_blue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:translationZ="7dp">
+
+            <ImageView
+                android:id="@+id/project_image"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="@drawable/no_image_icon"
+                android:paddingTop="85dp"
+                android:paddingBottom="30dp" />
+
+            <TextView
+                android:id="@+id/project_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Short Description"
+                android:textSize="17sp"
+                android:textColor="@color/info_light_blue" />
+
+            <TextView
+                android:id="@+id/project_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Project Name"
+                android:textSize="25sp"
+                android:textColor="@color/info_light_blue" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="280dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:translationZ="7dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:gravity="top"
+                    android:paddingStart="20dp"
+                    android:text="My To-Do"
+                    android:textSize="16sp"
+                    android:textColor="@color/info_light_blue" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/subproject1_button"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/no_image_icon"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/subproject1_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="Project Name"
+                            android:textSize="17sp"
+                            android:textColor="@color/info_light_blue" />
+
+                        <TextView
+                            android:id="@+id/subproject1_period"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="Developing Period"
+                            android:textSize="14sp"
+                            android:textColor="@color/info_light_blue" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/subproject2_button"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/no_image_icon"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/subproject2_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="Project Name"
+                            android:textSize="17sp"
+                            android:textColor="@color/info_light_blue" />
+
+                        <TextView
+                            android:id="@+id/subproject2_period"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="Developing Period"
+                            android:textSize="14sp"
+                            android:textColor="@color/info_light_blue" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/subproject3_button"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/no_image_icon"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/subproject3_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="Project Name"
+                            android:textSize="17sp"
+                            android:textColor="@color/info_light_blue" />
+
+                        <TextView
+                            android:id="@+id/subproject3_period"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:text="Developing Period"
+                            android:textSize="14sp"
+                            android:textColor="@color/info_light_blue" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/subproject_list_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="end"
+                    android:gravity="right|center_vertical"
+                    android:background="@android:color/transparent"
+                    android:text="MORE"
+                    android:textSize="15sp"
+                    android:textColor="@color/info_light_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="280dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical"
+                android:background="@color/white"
+                android:elevation="@dimen/cardview_default_elevation"
+                android:translationZ="7dp" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:text="Progress"
+                    android:textSize="16sp"
+                    android:textColor="@color/info_light_blue" />
+
+                <ImageView
+                    android:id="@+id/progress_100"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/progress_bar_false" />
+
+                <ImageView
+                    android:id="@+id/progress_85"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/progress_bar_false" />
+
+                <ImageView
+                    android:id="@+id/progress_70"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/progress_bar_false" />
+
+                <ImageView
+                    android:id="@+id/progress_55"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/progress_bar_false" />
+
+                <ImageView
+                    android:id="@+id/progress_40"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/progress_bar_true" />
+
+                <ImageView
+                    android:id="@+id/progress_25"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/progress_bar_true" />
+
+                <ImageView
+                    android:id="@+id/progress_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/progress_bar_true" />
+
+                <ImageView
+                    android:id="@+id/progress_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/progress_bar_true" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

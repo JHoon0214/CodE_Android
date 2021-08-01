@@ -45,6 +45,23 @@ public class FragmentMyProject extends Fragment {
         project3Category = (TextView) view.findViewById(R.id.project3_category);
         moreButton = (Button) view.findViewById(R.id.project_list_button);
 
+        /* 임시로 프로젝트 객체 생성. 추후 로컬이나 서버에서 정보를 불러올 예정임 */
+        Project project1 = new Project("프로젝트 1", "안드로이드 어플 제작", "Android");
+        Project project2 = new Project("프로젝트 2", "iOS 어플 제작", "iOS");
+        Project project3 = new Project("프로젝트 3", "웹페이지 제작", "Web Front-end");
+
+        /* recentProject 객체에는 가장 최신 수정 사항이 있는 프로젝트 객체를 연결 */
+        Project recentProject = project1;
+
+        project1Name.setText(project1.name);
+        project1Category.setText(project1.category);
+        project2Name.setText(project2.name);
+        project2Category.setText(project2.category);
+        project3Name.setText(project3.name);
+        project3Category.setText(project3.category);
+        recentProjectName.setText(recentProject.name);
+        recentProjectDescription.setText(recentProject.description);
+
         moreButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +75,9 @@ public class FragmentMyProject extends Fragment {
         recentProjectButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String projectName = recentProjectName.getText().toString();
+                String projectName = recentProject.name;
+                String projectCategory = recentProject.category;
+                String projectDescription = recentProject.description;
 
                 // 프로젝트 세부 정보 화면에서 프로젝트 아이콘 사진을 받아올 떄 식별용으로 사용할 이미지 이름
                 String projectImageName = projectName + "_image";
@@ -67,6 +86,8 @@ public class FragmentMyProject extends Fragment {
                 /*
                 Intent recentProjectIntent = new Intent(getActivity(), ProjectDetailActivity.class);
                 recentProjectIntent.putExtra("projectName", projectName);
+                recentProjectIntent.putExtra("projectDescription", projectDescription);
+                recentProjectIntent.putExtra("projectCategory", projectCategory);
                 recentProjectIntent.putExtra("projectImageName", projectImageName);
                 startActivity(recentProjectIntent);*/
             }
@@ -75,8 +96,18 @@ public class FragmentMyProject extends Fragment {
         project1Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String projectName = project1Name.getText().toString();
+                String projectName = project1.name;
+                String projectCategory = project1.category;
+                String projectDescription = project1.description;
                 String projectImageName = projectName + "_image";
+
+                Intent recentProjectIntent = new Intent(getActivity(), ProjectDetailActivity.class);
+                recentProjectIntent.putExtra("projectName", projectName);
+                recentProjectIntent.putExtra("projectDescription", projectDescription);
+                recentProjectIntent.putExtra("projectCategory", projectCategory);
+                recentProjectIntent.putExtra("projectImageName", projectImageName);
+                startActivity(recentProjectIntent);
+              
                 /*
                 Intent project1Intent = new Intent(getActivity(), ProjectDetailActivity.class);
                 project1Intent.putExtra("projectName", projectName);
@@ -88,8 +119,18 @@ public class FragmentMyProject extends Fragment {
         project2Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String projectName = project2Name.getText().toString();
+                String projectName = project2.name;
+                String projectCategory = project2.category;
+                String projectDescription = project2.description;
                 String projectImageName = projectName + "_image";
+
+                Intent recentProjectIntent = new Intent(getActivity(), ProjectDetailActivity.class);
+                recentProjectIntent.putExtra("projectName", projectName);
+                recentProjectIntent.putExtra("projectDescription", projectDescription);
+                recentProjectIntent.putExtra("projectCategory", projectCategory);
+                recentProjectIntent.putExtra("projectImageName", projectImageName);
+                startActivity(recentProjectIntent);
+
                 /*
                 Intent project2Intent = new Intent(getActivity(), ProjectDetailActivity.class);
                 project2Intent.putExtra("projectName", projectName);
@@ -101,8 +142,18 @@ public class FragmentMyProject extends Fragment {
         project3Button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String projectName = project2Name.getText().toString();
+                String projectName = project3.name;
+                String projectCategory = project3.category;
+                String projectDescription = project3.description;
                 String projectImageName = projectName + "_image";
+
+                Intent recentProjectIntent = new Intent(getActivity(), ProjectDetailActivity.class);
+                recentProjectIntent.putExtra("projectName", projectName);
+                recentProjectIntent.putExtra("projectDescription", projectDescription);
+                recentProjectIntent.putExtra("projectCategory", projectCategory);
+                recentProjectIntent.putExtra("projectImageName", projectImageName);
+                startActivity(recentProjectIntent);
+              
                 /*
                 Intent project3Intent = new Intent(getActivity(), ProjectDetailActivity.class);
                 project3Intent.putExtra("projectName", projectName);
@@ -112,5 +163,27 @@ public class FragmentMyProject extends Fragment {
         });
 
         return view;
+    }
+
+    public class Project {
+        String name, description, category;
+        boolean completed;
+
+        Project(String setName, String setCategory) {
+            completed = false;
+            this.name = setName;
+            this.category = setCategory;
+        }
+
+        Project(String setName, String setDescription, String setCategory) {
+            completed = false;
+            this.name = setName;
+            this.description = setDescription;
+            this.category = setCategory;
+        }
+
+        public void finishProject() {
+            completed = true;
+        }
     }
 }
