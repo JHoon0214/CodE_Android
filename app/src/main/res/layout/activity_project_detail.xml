@@ -22,14 +22,14 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:id="@+id/project_drawer"
+                    android:id="@+id/back_button"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:minHeight="?actionBarSize"
                     android:layout_marginStart="15dp"
                     android:layout_gravity="start|center_vertical"
                     android:gravity="center"
-                    android:background="@drawable/drawer_icon" />
+                    android:background="@drawable/back_button" />
 
                 <ImageView
                     android:id="@+id/logo_inapp"

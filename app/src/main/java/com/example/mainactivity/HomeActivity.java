@@ -83,5 +83,6 @@ public class HomeActivity extends AppCompatActivity {
     }
     public void replaceFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.frame, fragment).commit();
+
     }
 }
