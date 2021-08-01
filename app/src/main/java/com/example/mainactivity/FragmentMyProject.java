@@ -83,12 +83,13 @@ public class FragmentMyProject extends Fragment {
                 String projectImageName = projectName + "_image";
 
                 // 선택한 프로젝트의 정보를 가지고 세부 정보 화면으로 전환
+                /*
                 Intent recentProjectIntent = new Intent(getActivity(), ProjectDetailActivity.class);
                 recentProjectIntent.putExtra("projectName", projectName);
                 recentProjectIntent.putExtra("projectDescription", projectDescription);
                 recentProjectIntent.putExtra("projectCategory", projectCategory);
                 recentProjectIntent.putExtra("projectImageName", projectImageName);
-                startActivity(recentProjectIntent);
+                startActivity(recentProjectIntent);*/
             }
         });
 
@@ -106,6 +107,12 @@ public class FragmentMyProject extends Fragment {
                 recentProjectIntent.putExtra("projectCategory", projectCategory);
                 recentProjectIntent.putExtra("projectImageName", projectImageName);
                 startActivity(recentProjectIntent);
+              
+                /*
+                Intent project1Intent = new Intent(getActivity(), ProjectDetailActivity.class);
+                project1Intent.putExtra("projectName", projectName);
+                project1Intent.putExtra("projectImageName", projectImageName);
+                startActivity(project1Intent);*/
             }
         });
 
@@ -123,6 +130,12 @@ public class FragmentMyProject extends Fragment {
                 recentProjectIntent.putExtra("projectCategory", projectCategory);
                 recentProjectIntent.putExtra("projectImageName", projectImageName);
                 startActivity(recentProjectIntent);
+
+                /*
+                Intent project2Intent = new Intent(getActivity(), ProjectDetailActivity.class);
+                project2Intent.putExtra("projectName", projectName);
+                project2Intent.putExtra("projectImageName", projectImageName);
+                startActivity(project2Intent);*/
             }
         });
 
@@ -140,6 +153,12 @@ public class FragmentMyProject extends Fragment {
                 recentProjectIntent.putExtra("projectCategory", projectCategory);
                 recentProjectIntent.putExtra("projectImageName", projectImageName);
                 startActivity(recentProjectIntent);
+              
+                /*
+                Intent project3Intent = new Intent(getActivity(), ProjectDetailActivity.class);
+                project3Intent.putExtra("projectName", projectName);
+                project3Intent.putExtra("projectImageName", projectImageName);
+                startActivity(project3Intent);*/
             }
         });
 

@@ -52,6 +52,7 @@
             android:layout_marginStart="25dp"
             android:layout_marginEnd="25dp"
             android:hint="이메일을 입력하세요."
+            android:text="admin@test.com"
             android:textSize="12sp"
             android:inputType="text"
             android:background="@null" />
@@ -85,6 +86,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 android:hint="비밀번호를 입력하세요."
+                android:text="admin1234"
                 android:textSize="12sp"
                 android:inputType="textPassword"
                 android:background="@null" />

@@ -18,6 +18,16 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.regex.Pattern;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -197,54 +207,55 @@ public class SignUpActivity extends AppCompatActivity {
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                
             }
         });
 
-        // 서버 파트
-        /*
+        // 서버 통신
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String emailAuthentic = address;
+                String email = emailText.getText().toString();
                 String password = passwordText.getText().toString();
                 String firstName = firstNameText.getText().toString();
                 String lastName = lastNameText.getText().toString();
                 String category = developCategoryText.getText().toString();
 
-                String url = getString(R.string.url) + "/user/validation/email/" + address;
+                JSONObject infoForLogin = new JSONObject();
+                JSONObject name = new JSONObject();
+                try {
+                    infoForLogin.put("eMail", email);
+                    infoForLogin.put("password", password);
+                    infoForLogin.put("developOption", category);
 
-                System.out.println(url);
+                    name.put("firstName", firstName);
+                    name.put("lastName", lastName);
 
-                if (checkEmail && checkFirstName && checkLastName && checkPassword && checkPasswordConfirmed) {
-                    RequestQueue queue = Volley.newRequestQueue(SignUpActivity.this);
-                    final StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                            new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
-                                    if (response.equals("false")) {
-                                        Toast.makeText(SignUpActivity.this, "입력한 정보를 확인해주십시오.", Toast.LENGTH_SHORT).show();
-                                    } else {
-                                        Intent next_intent = new Intent(SignUpActivity.this, HomeActivity.class);
-                                        next_intent.putExtra("emailText", emailAuthentic);
-                                        next_intent.putExtra("password", password);
-                                        next_intent.putExtra("firstname", firstName);
-                                        next_intent.putExtra("lastname", lastName);
-                                        next_intent.putExtra("category", category);
-                                        startActivity(next_intent);
-                                    }
-                                }
-                            }, new Response.ErrorListener() {
-                        @Override
-                        public void onErrorResponse(VolleyError error) {
-                            Toast.makeText(SignUpActivity.this, "오류입니다.", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-                    queue.add(stringRequest);
-                } else {
-                    Toast.makeText(SignUpActivity.this, "입력한 정보를 다시 확인해주세요 :)", Toast.LENGTH_SHORT).show();
+                    infoForLogin.put("name", name);
+                } catch (JSONException exception) {
+                    exception.printStackTrace();
                 }
+
+                String url = getString(R.string.url) + "/signUp";
+                RequestQueue queue = Volley.newRequestQueue(SignUpActivity.this);
+                final JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, url, infoForLogin,
+                        new Response.Listener<JSONObject>() {
+                            @Override
+                            public void onResponse(JSONObject response) {
+
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        //Toast.makeText(SignUpCreateProfile.this, "오류입니다", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
+                queue.add(jsonObjectRequest);
+                Intent intent = new Intent(SignUpActivity.this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
-        }); */
+        });
     }
 }

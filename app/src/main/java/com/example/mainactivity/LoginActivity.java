@@ -8,9 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,11 +49,11 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent back_intent = new Intent(LoginActivity.this, MainActivity.class);
-                finish();
                 startActivity(back_intent);
+                finish();
             }
         });
-/* 서버구간
+
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +64,6 @@ public class LoginActivity extends AppCompatActivity {
                 System.out.println(password);
 
                 // 서버 구간
-
                 JSONObject infoForLogin = new JSONObject();
                 try {
                     infoForLogin.put("eMail", email);
@@ -104,8 +112,8 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onResponse(JSONObject response) {
                                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                                finish();
                                 startActivity(intent);
+                                finish();
                             }
                         }, new Response.ErrorListener() {
                     @Override
@@ -123,70 +131,5 @@ public class LoginActivity extends AppCompatActivity {
                 queue.add(jsonObjectRequest);
             }
         });
-    }
-
-    private void getMicroDust() {
-        String url = "http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=ZaEuGtM8LYExIc%2FxBYwBYjrB%2BB4Lmetl1CRgp%2FPrJGfJRYGQec%2Fr2mqMRAaDuoRUuolev3%2BO%2FmLtvl34LS%2Be2A%3D%3D&returnType=json&sidoName=전국&pageNo=" + cnt;
-        Log.i("dataUrl", url);
-        RequestQueue queue = Volley.newRequestQueue(this);
-
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        try {
-                            JSONObject body = response.getJSONObject("response");
-                            JSONArray array = body.getJSONArray("items");
-                            for (int i = 0; i<array.length(); i++) {
-                                for(int j = 0; j<17; j++){
-                                    JSONObject object = array.getJSONObject(i);
-                                    if(object.get("sidoName").equals(location[j])){
-                                        locationPmGrade[i] += Integer.parseInt(object.get("pm10Grade").toString());
-                                        locationNum[i]++;
-                                    }
-                                }
-                            }
-                            cnt++;
-                        } catch (Exception e){
-                            e.printStackTrace();
-                        }
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        });
-
-        queue.add(jsonObjectRequest);
-    }
-
-    private void sendToServerArray() {
-        RequestQueue queue = Volley.newRequestQueue(this);
-        String url = getString(R.string.url) + "";
-        JSONArray jsonArray = new JSONArray();
-        for(int i = 0; i<17 ;i++){
-            JSONObject object = new JSONObject();
-            try {
-                object.put("sido", location[i]);
-                object.put("avg", locationPmGrade[i] / locationNum[i]);
-                jsonArray.put(object);
-            } catch (Exception e){
-                e.printStackTrace();
-            }
-        }
-        Log.i("array", jsonArray.toString());
-        JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.POST, url, jsonArray,
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-
-            }
-        }); */
     }
 }
