@@ -98,6 +98,7 @@ public class LoginActivity extends AppCompatActivity {
                 SharedPreferences sharedPreferences = getSharedPreferences("token", MODE_PRIVATE);
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("Authorization", response.get("access_token").toString());
+                editor.putString("eMail", loginText.getText().toString());
                 editor.apply();
             }
 
