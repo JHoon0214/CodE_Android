@@ -6,4 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".FragmentMessage">
 
+    <!-- Fragment 화면 기본 인터페이스 생성 -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,6 +21,7 @@ public class FragmentSchedule extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_fragment_schedule, container, false);
 
+        // 기본 Fragment 인터페이스 생성
         return view;
     }
 }
