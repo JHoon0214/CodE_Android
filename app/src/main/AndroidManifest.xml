@@ -14,7 +14,7 @@
 
         <activity android:name=".SubprojectDetailActivity" />
         <activity android:name=".ProjectDetailActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".SelectingCalendarActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".LoginActivity" />
 
@@ -22,7 +22,7 @@
             android:name=".MainActivity"
             android:exported="true"/>
         <activity
-            android:name=".SelectingCalendarActivity">
+            android:name=".HomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

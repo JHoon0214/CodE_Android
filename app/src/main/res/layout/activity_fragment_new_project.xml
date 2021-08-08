@@ -3,161 +3,272 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/fg"
     android:background="@color/tab_grey_blue">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:orientation="vertical"
-        android:background="@color/white"
-        android:elevation="@dimen/cardview_default_elevation"
-        android:translationZ="7dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:text="Project Name"
-            android:textSize="15sp"
-            android:textColor="@color/info_light_blue" />
-
-        <EditText
-            android:id="@+id/new_project_name"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:hint="프로젝트 이름을 입력하세요"
-            android:textSize="12sp"
-            android:textColor="@color/black"
-            android:inputType="text"
-            android:background="@null"
-            android:enabled="false" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:src="@drawable/login_divider" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:text="Short Description"
-            android:textSize="15sp"
-            android:textColor="@color/info_light_blue" />
-
-        <EditText
-            android:id="@+id/new_project_description"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:hint="프로젝트에 대한 간단한 설명을 입력하세요"
-            android:textSize="12sp"
-            android:textColor="@color/black"
-            android:inputType="text"
-            android:background="@null"
-            android:enabled="false" />
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:src="@drawable/login_divider" />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal" >
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:elevation="@dimen/cardview_default_elevation"
+            android:translationZ="7dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="Project Name"
+                android:textSize="15sp"
+                android:textColor="@color/info_light_blue" />
+
+            <EditText
+                android:id="@+id/new_project_name"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:hint="프로젝트 이름을 입력하세요"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:background="@null"
+                android:enabled="false" />
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:src="@drawable/no_image_icon"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp"
-                android:background="@color/white"
-                android:elevation="@dimen/cardview_default_elevation"
-                android:translationZ="7dp" />
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/login_divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="Short Description"
+                android:textSize="15sp"
+                android:textColor="@color/info_light_blue" />
+
+            <EditText
+                android:id="@+id/new_project_description"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:hint="프로젝트에 대한 간단한 설명을 입력하세요"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:background="@null"
+                android:enabled="false" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:src="@drawable/login_divider" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="15dp" >
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal" >
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Project Icon"
-                    android:textSize="15sp"
-                    android:textColor="@color/info_light_blue" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="프로젝트 대표 이미지(아이콘)를 등록합니다"
-                    android:textSize="12sp"
-                    android:textColor="@color/grey_black" />
-
-                <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginEnd="20dp"
-                    android:text="Select Image File"
-                    android:textSize="13sp"
-                    android:textColor="@color/white"
-                    android:background="@drawable/progress_bar_true"
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginStart="25dp"
+                    android:src="@drawable/no_image_icon"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:background="@color/white"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:translationZ="7dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="15dp" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Project Icon"
+                        android:textSize="15sp"
+                        android:textColor="@color/info_light_blue" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="프로젝트 대표 이미지(아이콘)를 등록합니다"
+                        android:textSize="12sp"
+                        android:textColor="@color/grey_black" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="20dp"
+                        android:text="Select Image File"
+                        android:textSize="13sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/progress_bar_true"
+                        android:elevation="@dimen/cardview_default_elevation"
+                        android:translationZ="7dp" />
+                </LinearLayout>
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="Add Team member"
+                android:textSize="15sp"
+                android:textColor="@color/info_light_blue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:text="eMail: "
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/grey_black"/>
+                    <EditText
+                        android:id="@+id/eMail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="추가할 팀원의 이메일을 입력하세요"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:text="Role: "
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/grey_black"/>
+                    <EditText
+                        android:id="@+id/Role"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="추가할 팀원의 역할을 입력하세요"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+                <Button
+                    android:id="@+id/addMember"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Add member"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:text="DeadLine"
+                android:textSize="15sp"
+                android:textColor="@color/info_light_blue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:text="Start: "
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/grey_black"/>
+                    <TextView
+                        android:id="@+id/startDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="프로젝트 시작 날짜를 선택하세요"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:text="End: "
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:textColor="@color/grey_black"/>
+                    <TextView
+                        android:id="@+id/endDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical
+"
+                        android:hint="프로젝트 종료 날짜를 선택하세요"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/new_project_button"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:text="Confirm and Start Project"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:background="@color/info_light_blue" />
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginEnd="25dp"
-            android:text="Project Detail"
-            android:textSize="15sp"
-            android:textColor="@color/info_light_blue" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical" >
-
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/new_project_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:text="Confirm and Start Project"
-        android:textSize="18sp"
-        android:textColor="@color/white"
-        android:background="@color/info_light_blue" />
+    </ScrollView>
 </FrameLayout>

@@ -1,9 +1,11 @@
 package com.example.mainactivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.IdRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.OrientationHelper;
 import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
@@ -23,8 +25,8 @@ import java.util.Calendar;
 import java.util.List;
 
 public class SelectingCalendarActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
-
     private CalendarView calendarView;
+    Fragment fragment;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,6 +57,11 @@ public class SelectingCalendarActivity extends AppCompatActivity implements Radi
                 String endDate = year2 + "년 "+ (month2+1)  + "월 " + day2 + "일 " + "(" + week2 + ")";
 
                 System.out.println(startDate + " "+ endDate);
+                Intent intent = new Intent(SelectingCalendarActivity.this, FragmentNewProject.class);
+                intent.putExtra("startDate", startDate);
+                intent.putExtra("endDate", endDate);
+                setResult(RESULT_OK, intent);
+                moveToNewProject();
             }
         });
     }
@@ -113,5 +120,10 @@ public class SelectingCalendarActivity extends AppCompatActivity implements Radi
     public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
         clearSelectionsMenuClick();
         calendarView.setSelectionType(SelectionType.RANGE);
+    }
+
+    private void moveToNewProject() {
+
+        finish();
     }
 }
